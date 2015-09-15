@@ -13,5 +13,7 @@ How it works
 Simple route naming convention -- controller_name/method_name --
 specifies, which controller and method to be called
 
+- /               will call GuestController.home();
+- /login          will call GuestController.login();
 - /admin/login    will call AdminController.login();
 - /admin/register will call AdminController.register();
