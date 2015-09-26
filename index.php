@@ -12,6 +12,11 @@ if (defined('ROOT_DIR') == false) {
 
 list($controller, $method) = action();
 
+$cssFiles = [
+    ROOT_URL . 'shared/css/font-awesome-4-3-0.css',
+    ROOT_URL . 'shared/css/bootstrap-3-2-0.min.css',
+    ROOT_URL . 'shared/css/bootstrap-sandstone-3-2-0.min.css',
+];
 $javascriptFiles = [
     ROOT_URL . 'shared/js/jquery.js',
     ROOT_URL . 'shared/js/bootstrap-3-2-0.min.js',
@@ -27,10 +32,9 @@ $javascriptFiles = [
 <meta name="fragment" content="!">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/png" href="<?php echo ROOT_URL; ?>img/icon.png" />
-<link rel="stylesheet" href="<?php echo ROOT_URL ?>shared/css/font-awesome-4-3-0.css" />
-<link rel="stylesheet" href="<?php echo ROOT_URL ?>shared/css/bootstrap-3-2-0.min.css" />
-<link rel="stylesheet" href="<?php echo ROOT_URL ?>shared/css/bootstrap-sandstone-3-2-0.min.css" />
-<link rel="stylesheet" href="<?php echo ROOT_URL ?>shared/css/metro.css" />
+<?php foreach ($cssFiles as $f) { ?>
+    <link rel="stylesheet" href="<?php echo $f ?>" />
+<?php } ?>
 <?php foreach ($javascriptFiles as $f) { ?>
     <script src="<?php echo $f ?>"></script>
 <?php } ?>
