@@ -13,17 +13,17 @@ if (defined('ROOT_DIR') == false) {
 list($controller, $method) = action();
 
 $cssFiles = [
-    ROOT_URL . 'shared/css/font-awesome-4-3-0.css',
-    ROOT_URL . 'shared/css/bootstrap-3-2-0.min.css',
-    ROOT_URL . 'shared/css/bootstrap-sandstone-3-2-0.min.css',
+    ROOT_URL . 'css/font-awesome-4-3-0.css',
+    ROOT_URL . 'css/bootstrap-3-2-0.min.css',
+    ROOT_URL . 'css/bootstrap-sandstone-3-2-0.min.css',
 ];
 $javascriptFiles = [
-    ROOT_URL . 'shared/js/jquery.js',
-    ROOT_URL . 'shared/js/bootstrap-3-2-0.min.js',
-    ROOT_URL . 'shared/js/Registry.js',
-    ROOT_URL . 'shared/js/Helper.js',
-    ROOT_URL . 'shared/js/GuestController.js',
-    ROOT_URL . 'shared/js/AuthController.js',
+    ROOT_URL . 'js/lib/jquery.js',
+    ROOT_URL . 'js/lib/bootstrap-3-2-0.min.js',
+    ROOT_URL . 'js/Registry.js',
+    ROOT_URL . 'js/Helper.js',
+    ROOT_URL . 'js/controllers/GuestController.js',
+    ROOT_URL . 'js/controllers/AuthController.js',
 ];
 ?>
 <!DOCTYPE html>
