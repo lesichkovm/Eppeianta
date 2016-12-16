@@ -2,28 +2,23 @@
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 ini_set('display_startup_errors', true);
-
-if (defined('ROOT_URL') == false) {
-    define('ROOT_URL', 'http://myurl.com/app/');
-}
-if (defined('ROOT_DIR') == false) {
-    define('ROOT_DIR', __DIR__ . DIRECTORY_SEPARATOR);
-}
+defined('ROOT_URL') OR define('ROOT_URL', 'http://myurl.com');
+defined('ROOT_DIR') OR define('ROOT_DIR', __DIR__);
 
 list($controller, $method) = action();
 
 $cssFiles = [
-    ROOT_URL . 'css/font-awesome-4-3-0.css',
-    ROOT_URL . 'css/bootstrap-3-2-0.min.css',
-    ROOT_URL . 'css/bootstrap-sandstone-3-2-0.min.css',
+    ROOT_URL . '/css/font-awesome-4-3-0.css',
+    ROOT_URL . '/css/bootstrap-3-2-0.min.css',
+    ROOT_URL . '/css/bootstrap-sandstone-3-2-0.min.css',
 ];
 $javascriptFiles = [
-    ROOT_URL . 'js/lib/jquery.js',
-    ROOT_URL . 'js/lib/bootstrap-3-2-0.min.js',
-    ROOT_URL . 'js/Registry.js',
-    ROOT_URL . 'js/Helper.js',
-    ROOT_URL . 'js/controllers/GuestController.js',
-    ROOT_URL . 'js/controllers/AuthController.js',
+    ROOT_URL . '/js/lib/jquery.js',
+    ROOT_URL . '/js/lib/bootstrap-3-2-0.min.js',
+    ROOT_URL . '/js/Registry.js',
+    ROOT_URL . '/js/Helper.js',
+    ROOT_URL . '/js/controllers/GuestController.js',
+    ROOT_URL . '/js/controllers/AuthController.js',
 ];
 ?>
 <!DOCTYPE html>
